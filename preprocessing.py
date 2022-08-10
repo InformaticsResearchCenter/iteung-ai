@@ -23,7 +23,7 @@ stemmer = factory.create_stemmer()
 punct_re_escape = re.compile('[%s]' % re.escape('!"#$%&()*+,./:;<=>?@[\\]^_`{|}~'))
 unknowns = ["gak paham","kurang ngerti","I don't know"]
 
-list_indonesia_slang = pd.read_csv('output_dir/daftar-slang-bahasa-indonesia.csv', header=None).to_numpy()
+list_indonesia_slang = pd.read_csv('./dataset/daftar-slang-bahasa-indonesia.csv', header=None).to_numpy()
 
 data_slang = {}
 for key, value in list_indonesia_slang:
@@ -56,7 +56,7 @@ def normalize_sentence(sentence):
     return punct_re_escape.sub('',normal_sentence)
   return sentence
 
-df = pd.read_csv('dataset/qa.csv', usecols= ['question','answer'])
+df = pd.read_csv('./dataset/qa.csv', usecols= ['question','answer'])
 df.head()
 
 question_length = {}
@@ -97,7 +97,7 @@ df_answer_length.describe()
 
 data_length = 0
 
-filename = open('clean_qa.txt', 'a+')
+filename = open('./dataset/clean_qa.txt', 'a+')
 
 for index, row in df.iterrows():
   question = normalize_sentence(row['question'])
