@@ -1,5 +1,5 @@
 # ITeung AI
-Indonesia ChatBot using Seq2Seq (LSTM) with Bahdanau Attention
+Indonesia ChatBot using Seq2Seq (LSTM and BiLSTM) with Bahdanau Attention Mechanism
 
 # Environment
 Python: 3.7.9\
