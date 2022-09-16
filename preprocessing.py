@@ -72,10 +72,10 @@ for index, row in df.iterrows():
   else:
     question_length[len(question.split())] = 1
 
-  if answer_length.get(len(row['answer'].split())):
-    answer_length[len(row['answer'].split())] += 1
+  if answer_length.get(len(str(row['answer']).split())):
+    answer_length[len(str(row['answer']).split())] += 1
   else:
-    answer_length[len(row['answer'].split())] = 1
+    answer_length[len(str(row['answer']).split())] = 1
 
 question_length
 
