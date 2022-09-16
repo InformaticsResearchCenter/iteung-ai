@@ -22,7 +22,7 @@ try:
 except:
     pass
 
-dataset = pd.read_csv('clean_qa.txt', delimiter="\t", header=None)
+dataset = pd.read_csv('../dataset/clean_qa.txt', delimiter="|", header=None)
 
 dataset_val = dataset.iloc[1794:].to_csv('output_dir/val.csv')
 
