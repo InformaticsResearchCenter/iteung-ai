@@ -97,8 +97,9 @@ df_answer_length.describe()
 
 data_length = 0
 
-filename = open('./dataset/clean_qa.txt', 'a+')
-
+#filename = open('./dataset/clean_qa.txt', 'a+')
+filename= './dataset/clean_qa.tx'
+with open(filename, 'w', encoding='utf-8') as f:
 for index, row in df.iterrows():
   question = normalize_sentence(row['question'])
   question = normalize_sentence(question)
@@ -107,9 +108,8 @@ for index, row in df.iterrows():
   answer = row['answer'].lower().replace('iteung', 'aku').replace('\n', ' ')
 
   if len(question.split()) > 0 and len(question.split()) < 13 and len(answer.split()) < 29:
-    with open(filename, 'w', encoding='utf-8') as f:
-      body="{"+str(question)+"}|<START> {"+str(answer)+"} <END>\n"
-      print(body, file=f)
+    body="{"+str(question)+"}|<START> {"+str(answer)+"} <END>\n"
+    print(body, file=f)
     #filename.write(f"{question}\t<START> {answer} <END>\n")
 
-filename.close()
+#filename.close()
