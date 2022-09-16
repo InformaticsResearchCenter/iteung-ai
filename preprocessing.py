@@ -56,7 +56,7 @@ def normalize_sentence(sentence):
     return punct_re_escape.sub('',normal_sentence)
   return sentence
 
-df = pd.read_csv('./dataset/qa.csv', usecols= ['question','answer'])
+df = pd.read_csv('./dataset/qa.csv', sep='|',usecols= ['question','answer'])
 df.head()
 
 question_length = {}
