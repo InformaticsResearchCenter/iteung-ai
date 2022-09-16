@@ -108,7 +108,7 @@ for index, row in df.iterrows():
 
   if len(question.split()) > 0 and len(question.split()) < 13 and len(answer.split()) < 29:
     with open(filename, 'w', encoding='utf-8') as f:
-      body="{"+question+"}\t<START> {"+answer+"} <END>\n"
+      body="{"+str(question)+"}|<START> {"+str(answer)+"} <END>\n"
       print(body, file=f)
     #filename.write(f"{question}\t<START> {answer} <END>\n")
 
