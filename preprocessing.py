@@ -108,7 +108,7 @@ with open(filename, 'w', encoding='utf-8') as f:
     answer = str(row['answer']).lower().replace('iteung', 'aku').replace('\n', ' ')
 
     if len(question.split()) > 0 and len(question.split()) < 13 and len(answer.split()) < 29:
-      body="{"+question+"}|<START> {"+answer+"} <END>\n"
+      body="{"+question+"}|<START> {"+answer+"} <END>"
       print(body, file=f)
       #filename.write(f"{question}\t<START> {answer} <END>\n")
 
