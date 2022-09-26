@@ -21,8 +21,4 @@ $ python preprocessing.py
 ```console
 $ python training.py
 ```
-
-4. run testing.py
-```console
-$ python testing.py
-```
+4. check output_dir get 4 file from there to iteung-ai plus daftar-slang from dataset
